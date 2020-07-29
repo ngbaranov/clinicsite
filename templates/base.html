@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+	<link rel="stylesheet" href="{% static 'font-awesome/css/font-awesome.min.css' %} ">
+	<link rel="stylesheet" href="{% static 'css/style.css' %} ">
+
+    <title>Document</title>
+</head>
+<body>
+	<header class="main-header">
+		 <div class="container main-header-conteiner">
+			<nav class="navbar navbar-expand-sm">
+				<a class="navbar-brand" href="#"><img src={% static "/img/logo.png" %} alt=""></a>
+
+				<div class="collapse navbar-collapse" id="navbarNav">
+					<ul class="navbar-nav ml-auto">
+						<li class="nav-item active mr-4">
+							<a class="nav-link" href="#">О нас </a>
+						</li>
+						<li class="nav-item mr-4">
+							<a class="nav-link" href="#">Прейскурант</a>
+						</li>
+						<li class="nav-item mr-4">
+							<a class="nav-link" href="#">Лицензия</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">Контакты</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+			<section class="main-promo">
+				<h1 class="head-promo-title">КЛАССНЫЙ ДОКТОР</h1>
+				<p class="head-promo-text">Мы самые крутые ребята, всех вылечим
+					приходите тлько к нам, мы единственные
+					на этой планете, кто не помогает смерти
+					а по возможности борится с ней.</p>
+				<a class="buttom main-buttom" href="#">Подробнее</a>
+			</section>
+
+			<nav class="navbar navbar-expand-sm">
+				<ul class ="navbar-nav mt-5">
+
+					<li class="nav-link" >Работаем c 9.00 - 20.00<br>
+						без выходных</li>
+					<li class="nav-link">г. Касимов<br>
+						пл. Ленина д.20</li>
+					<li class="nav-link"><a class="main-info-link" href="tel:+7 (49131) 2  22 22">2-22-22 </a></li>
+				</ul>
+			</nav>
+			<nav class="menu-bottom">
+				<ul>
+					<li><a href="">Дермантолог</a></li>
+					<li><a href="">врач 2</a></li>
+					<li><a href="">врач 3</a></li>
+					<li><a href="">врач 4</a></li>
+					<li><a href="">врач 5</a></li>
+					<li><a href="">врач 6</a></li>
+					<li><a href="">врач 7</a></li>
+					<li><a href="">врач 8</a></li>
+				</ul>
+			</nav>
+
+		 </div>
+	</header>
+
+
+    {% block content %} {% endblock %}
+
+
+    <footer class="footer">
+		<div class="container mt-5">
+		<nav class="navbar navbar-expand-sm footer">
+			<a class="navbar-brand" href="#">Классный доктор</a>
+
+			<div class="collapse navbar-collapse " id="navbarNav">
+			  <span class="ml-auto" >Давайте дружить:</span>
+			  <ul class="navbar-nav  ml-2">
+				<li class="nav-item ml-3">
+				  <a class="nav-link" href="#"><i class="fa fa-vk fa-2x"></i></a>
+				</li>
+				<li class="nav-item ml-3">
+				  <a class="nav-link" href="#"><i class="fa fa-odnoklassniki fa-2x" aria-hidden="true"></i></a>
+				</li>
+				<li class="nav-item ml-3">
+				  <a class="nav-link" href="#"><i class="fa fa-facebook-official fa-2x" aria-hidden="true"></i></a>
+				</li>
+
+			  </ul>
+			</div>
+		  </nav>
+		</div>
+	</footer>
+
+
+
+	<script src="js/jquery-3.3.1.slim.min.js"></script>
+	<script src="js/popper.min.js"></script>
+	<script src="bootstrap/js/bootstrap.min.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,144 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<main>
+		<!-- Скидки и акции -->
+		<div class="container mt-5">
+			<div class="row">
+				<div class="col-md-9">
+					<div class="row">
+						<div class="col-md-12 ">
+							<h2>СКИДКИ И АКЦИИ</h2>
+							<img class="float-left mt-2" src="{% static '/img/check.png' %}" width="15px" height="74px" alt="tick">
+							<ul class="ml-3">
+								<li class="ml-3 content-discount">Пенсионерам скидки на гробы 15%</li>
+								<li class="ml-3 content-discount"> Студентам скидки на бухло и марафет 20%</li>
+								<li class="ml-3 content-discount"> Всем остальным плюс 20% без объяснений </li>
+							</ul>
+						</div>
+						<div class="col-md-12">
+							<div class="card-deck mt-4">
+								<div class="card stock pb-4">
+								  <div class="card-body">
+									<h3 class="card-title">Название карточки</h3>
+									<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+									<a href="#" class="buttom-blue">Подробнее</a>
+								  </div>
+								</div>
+								<div class="card stock pb-4">
+								  <div class="card-body">
+									<h3 class="card-title">Название карточки</h3>
+									<p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+									<a href="#" class="buttom-blue">Подробнее</a>
+								  </div>
+								</div>
+								<div class="card stock pb-4">
+								  <div class="card-body">
+									<h3 class="card-title">Название карточки</h3>
+									<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+									<a href="#" class="buttom-blue">Подробнее</a>
+								  </div>
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<form action="#" method="post" class="forms">
+						<p>Записаться на прием</p>
+						<label >
+							Выберите врача
+							<br>
+							<select name="theme">
+								<option value="light">Светлая тема</option>
+								<option value="dark">Тёмная тема</option>
+							</select>
+						</label>
+						<br>
+						<div class="date">
+						<label>
+							Дата визита:
+							<br>
+							<input type="date" name="data">
+						</label>
+						</div>
+						 <div class="time">
+						<label>
+
+							Время:
+							<br>
+							<input type="time" name="time">
+						</label>
+						</div>
+						<br>
+						<label>
+							Ваше имя:
+							<br>
+							<input type="text" name="name">
+						</label>
+						<br>
+						<label>
+							Ваш Телефон:<br>
+							<input type="tel" name="tel" pattern="[8]{1}-[0-9]{3}-[0-9]{3}">
+						</label>
+						<br>
+						<input type="button" name="button" value="Отправить" class="buttom">
+					</form>
+
+				</div>
+			</div>
+		</div>
+		<!-- Врачи -->
+		<div class="container mt-5">
+			<div class="card-deck">
+				<div class="card pb-4 ">
+				  <img class="card-img-top doctor" src="{% static '/img/doctor.jpg' %}" alt="Card image">
+				  <div class="card-body">
+					<h3 class="card-title">Название карточки</h3>
+					<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+				  </div>
+				  <a href="#" class="buttom-blue">Подробнее</a>
+				</div>
+				<div class="card pb-4">
+				  <img class="card-img-top doctor" src="{% static '/img/doctor.jpg' %}" alt="Card image cap">
+				  <div class="card-body">
+					<h3 class="card-title">Название карточки</h3>
+					<p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+				  </div>
+				  <a href="#" class="buttom-blue">Подробнее</a>
+				</div>
+				<div class="card pb-4">
+				  <img class="card-img-top doctor" src="{% static '/img/doctor.jpg' %}" alt="Card image cap">
+				  <div class="card-body">
+					<h3 class="card-title">Название карточки</h3>
+					<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+				  </div>
+				  <a href="#" class="buttom-blue">Подробнее</a>
+				</div>
+			</div>
+
+		</div>
+		<!--Информация-->
+
+			<div class="container mt-5">
+				<div class="card-deck">
+					<div class="card pb-4">
+					  <div class="card-body">
+						<h3 class="card-title">Название карточки</h3>
+						<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer dhakshhdhhlja naskcajasjj.</p>
+					  </div>
+					  <a href="#" class="buttom-blue">Подробнее</a>
+					</div>
+					<div class="card">
+					  <div class="card-body">
+						<h3 class="card-title">Название карточки</h3>
+						<p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+					  </div>
+					  <a href="#" class="buttom-blue">Подробнее</a>
+					</div>
+				</div>
+			</div>
+	</main>
+{% endblock %}
