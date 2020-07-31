@@ -1,5 +1,11 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from .models import Header
+from django.views.generic import ListView, DetailView
+
+class HeaderInfo(ListView):
+    model = Header
+    template_name = 'cooldoctor/index.html'
+    context_object_name = 'home'
 
 
 def index(request):

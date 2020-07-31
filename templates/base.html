@@ -12,6 +12,7 @@
 </head>
 <body>
 	<header class="main-header">
+
 		 <div class="container main-header-conteiner">
 			<nav class="navbar navbar-expand-sm">
 				<a class="navbar-brand" href="#"><img src={% static "/img/logo.png" %} alt=""></a>
@@ -43,14 +44,16 @@
 			</section>
 
 			<nav class="navbar navbar-expand-sm">
-				<ul class ="navbar-nav mt-5">
 
-					<li class="nav-link" >Работаем c 9.00 - 20.00<br>
-						без выходных</li>
-					<li class="nav-link">г. Касимов<br>
-						пл. Ленина д.20</li>
-					<li class="nav-link"><a class="main-info-link" href="tel:+7 (49131) 2  22 22">2-22-22 </a></li>
+                <ul class ="navbar-nav mt-5">
+
+                    {% for a in home %}
+					<li class="nav-link" > {{ a.work_hours|safe }}   </li>
+					<li class="nav-link"> {{ a.address|safe }}</li>
+					<li class="nav-link"><a class="main-info-link" href="tel:+7 (49131) 2  22 22">{{  a.fon }} </a></li>
+                    {% endfor %}
 				</ul>
+
 			</nav>
 			<nav class="menu-bottom">
 				<ul>
