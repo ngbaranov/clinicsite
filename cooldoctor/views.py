@@ -1,8 +1,13 @@
 from django.shortcuts import render
-from .models import Header
+from .models import *
 from django.views.generic import ListView, DetailView
 
 
+
+
+class ViewTopmenu(DetailView):
+    model = TopMenu
+    context_object_name = 'top_menu'
 
 
 
@@ -21,6 +26,7 @@ class HeaderInfo(ListView):
         context['fon'] = Header.objects.get(pk = 1).fon
 
         return context
+
 
 
 
