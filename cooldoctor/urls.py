@@ -3,5 +3,5 @@ from .views import *
 
 urlpatterns = [
     path('', HeaderInfo.as_view(), name='home'),
-    path('topmenu/<int:pk>', ViewTopmenu.as_view(), name='topmenu'),
+    path('infirmation/<int:pk>', information, name='information'),
 ]

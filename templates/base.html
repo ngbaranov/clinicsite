@@ -11,86 +11,13 @@
     <title>{{ title }}</title>
 </head>
 <body>
-	<header class="main-header">
-
-		 <div class="container main-header-conteiner">
-			<nav class="navbar navbar-expand-sm">
-				<a class="navbar-brand" href="#"><img src= "media/{{avatar}}"  alt=""></a>
-
-				<div class="collapse navbar-collapse" id="navbarNav">
-					<ul class="navbar-nav ml-auto">
-
-						<li class="nav-item active mr-4">
-							<a class="nav-link" href="#">О нас </a>
-						</li>
-						<li class="nav-item mr-4">
-							<a class="nav-link" href="#">Прейскурант</a>
-						</li>
-						<li class="nav-item mr-4">
-							<a class="nav-link" href="#">Лицензия</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#">Контакты</a>
-						</li>
-					</ul>
-				</div>
-			</nav>
-			<section class="main-promo">
-				<h1 class="head-promo-title">{{ title }}</h1>
-				<p class="head-promo-text"> {{ slogan }}</p>
-				<a class="buttom main-buttom" href="#">Подробнее</a>
-			</section>
-
-			<nav class="navbar navbar-expand-sm">
-                <ul class ="navbar-nav mt-5">
-                    <li class="nav-link" > {{ work_hours|safe }}   </li>
-					<li class="nav-link"> {{ address|safe }}</li>
-					<li class="nav-link"><a class="main-info-link" href="tel:+7 (49131) 2  22 22">{{  fon }} </a></li>
-                </ul>
-            </nav>
-			<nav class="menu-bottom">
-				<ul>
-					<li><a href="">Дермантолог</a></li>
-					<li><a href="">врач 2</a></li>
-					<li><a href="">врач 3</a></li>
-					<li><a href="">врач 4</a></li>
-					<li><a href="">врач 5</a></li>
-					<li><a href="">врач 6</a></li>
-					<li><a href="">врач 7</a></li>
-					<li><a href="">врач 8</a></li>
-				</ul>
-			</nav>
-
-		 </div>
-	</header>
+	 {% include 'inc/_header.html' %}
 
 
     {% block content %} {% endblock %}
 
 
-    <footer class="footer">
-		<div class="container mt-5">
-		<nav class="navbar navbar-expand-sm footer">
-			<a class="navbar-brand" href="#">Классный доктор</a>
-
-			<div class="collapse navbar-collapse " id="navbarNav">
-			  <span class="ml-auto" >Давайте дружить:</span>
-			  <ul class="navbar-nav  ml-2">
-				<li class="nav-item ml-3">
-				  <a class="nav-link" href="#"><i class="fa fa-vk fa-2x"></i></a>
-				</li>
-				<li class="nav-item ml-3">
-				  <a class="nav-link" href="#"><i class="fa fa-odnoklassniki fa-2x" aria-hidden="true"></i></a>
-				</li>
-				<li class="nav-item ml-3">
-				  <a class="nav-link" href="#"><i class="fa fa-facebook-official fa-2x" aria-hidden="true"></i></a>
-				</li>
-
-			  </ul>
-			</div>
-		  </nav>
-		</div>
-	</footer>
+     {% include 'inc/_footer.html' %}
 
 
 

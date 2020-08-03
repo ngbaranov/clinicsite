@@ -22,7 +22,7 @@ class TopMenu(models.Model):
     content = models.TextField(verbose_name='Контент')
 
     def get_absolute_url(self):
-        return reverse('view_topmenu', kwargs={'pk':self.pk})
+        return reverse('information', kwargs={'pk': self.pk})
 
     def __str__(self):
         return self.title

@@ -5,9 +5,9 @@ from django.views.generic import ListView, DetailView
 
 
 
-class ViewTopmenu(DetailView):
-    model = TopMenu
-    context_object_name = 'top_menu'
+def information(request, pk):
+
+    return render(request,'cooldoctor/information.html')
 
 
 
