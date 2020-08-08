@@ -12,6 +12,11 @@ def information(request, pk):
 def index (request):
     return render(request, 'cooldoctor/index.html')
 
+def specialization (request, specialization_id):
+    doctors = Doctor.objects.filter(specialization_id=specialization_id)
+    specialization = Specialization.objects.get(pk = specialization_id)
+    return render(request, 'cooldoctor/specialization.html', {'doctors': doctors, 'specialization': specialization})
+
 # class HeaderInfo(ListView):
 #     model = Header
 #     template_name = 'cooldoctor/index.html'

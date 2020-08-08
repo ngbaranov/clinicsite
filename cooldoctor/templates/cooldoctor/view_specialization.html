@@ -1,0 +1,7 @@
+<nav class="menu-bottom">
+    <ul>
+        {% for item in view_spec %}
+        <li><a href="{{ item.get_absolute_url }}">{{ item.title }}</a></li>
+        {% endfor %}
+    </ul>
+</nav>
