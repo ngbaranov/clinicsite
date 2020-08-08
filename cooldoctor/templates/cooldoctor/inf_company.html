@@ -1,0 +1,13 @@
+<section class="{{ menu_class }}">
+    <h1 class="head-promo-title">{{ inf.title }}</h1>
+    <p class="head-promo-text"> {{ inf.slogan }}</p>
+    <a class="buttom main-buttom" href="#">Подробнее</a>
+</section>
+
+<nav class="navbar navbar-expand-sm">
+    <ul class ="navbar-nav mt-5">
+        <li class="nav-link" > {{ inf.work_hours|safe }}   </li>
+        <li class="nav-link"> {{ inf.address|safe }}</li>
+        <li class="nav-link"><a class="main-info-link" href="tel:+7 (49131) 2  22 22">{{  inf.fon }} </a></li>
+    </ul>
+</nav>

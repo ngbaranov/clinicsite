@@ -1,10 +1,15 @@
 from django.db import models
 from django.urls import reverse
 
+class Avatar(models.Model):
+    avatar = models.ImageField(upload_to='photos/%Y/%m/%d/', blank=True, verbose_name='Аватарка')
+    class Meta:
+        verbose_name = 'Аватарка'
+        verbose_name_plural = 'Аватарки'
+
 
 class Header(models.Model):
     title = models.CharField(max_length=250, default='Cool', verbose_name='Название')
-    avatar = models.ImageField(upload_to='photos/%Y/%m/%d/', blank=True, verbose_name='Аватарка')
     slogan = models.TextField(blank=True, verbose_name='Слоган')
     work_hours = models.CharField(max_length=250, verbose_name='Часы работы')
     address = models.CharField(max_length=250, verbose_name='Адрес')
@@ -20,6 +25,7 @@ class Header(models.Model):
 class TopMenu(models.Model):
     title = models.CharField(max_length=250, verbose_name='Заголовок')
     content = models.TextField(verbose_name='Контент')
+
 
     def get_absolute_url(self):
         return reverse('information', kwargs={'pk': self.pk})

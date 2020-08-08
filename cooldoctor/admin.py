@@ -12,6 +12,7 @@ class TopmenuAdminForm(forms.ModelForm):
 class TopMenuAdmin(admin.ModelAdmin):
     form = TopmenuAdminForm
 
+admin.site.register(Avatar)
 admin.site.register(Header)
 admin.site.register(TopMenu, TopMenuAdmin)
 admin.site.register(Doctor)
