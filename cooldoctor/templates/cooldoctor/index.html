@@ -12,36 +12,23 @@
 							<h2>СКИДКИ И АКЦИИ</h2>
 							<img class="float-left mt-2" src="{% static '/img/check.png' %}" width="15px" height="74px" alt="tick">
 							<ul class="ml-3">
-								<li class="ml-3 content-discount">Пенсионерам скидки на гробы 15%</li>
-								<li class="ml-3 content-discount"> Студентам скидки на бухло и марафет 20%</li>
-								<li class="ml-3 content-discount"> Всем остальным плюс 20% без объяснений </li>
+                                {% for item in home %}
+								<li class="ml-3 content-discount">{{ item.title }}</li>
+                                {% endfor %}
 							</ul>
 						</div>
 						<div class="col-md-12">
 							<div class="card-deck mt-4">
+                                {% for item in discounts %}
 								<div class="card stock pb-4">
 								  <div class="card-body">
-									<h3 class="card-title">Название карточки</h3>
-									<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                      <h3 class="card-title">{{ item.title|safe }}</h3>
+									<p class="card-text">{{ item.content|safe }}</p>
 									<a href="#" class="buttom-blue">Подробнее</a>
 								  </div>
 								</div>
-								<div class="card stock pb-4">
-								  <div class="card-body">
-									<h3 class="card-title">Название карточки</h3>
-									<p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-									<a href="#" class="buttom-blue">Подробнее</a>
-								  </div>
-								</div>
-								<div class="card stock pb-4">
-								  <div class="card-body">
-									<h3 class="card-title">Название карточки</h3>
-									<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-									<a href="#" class="buttom-blue">Подробнее</a>
-								  </div>
-
-								</div>
-							</div>
+                                {% endfor %}
+                            </div>
 						</div>
 					</div>
 				</div>
@@ -93,30 +80,19 @@
 		<!-- Врачи -->
 		<div class="container mt-5">
 			<div class="card-deck">
+                {% for item in doctor %}
 				<div class="card pb-4 ">
-				  <img class="card-img-top doctor" src="{% static '/img/doctor.jpg' %}" alt="Card image">
+                  {% if item.photo %}
+				  <img class="card-img-top doctor" src="{{ item.photo.url }}" alt="Card image">
+                  {% endif %}
 				  <div class="card-body">
-					<h3 class="card-title">Название карточки</h3>
-					<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+					<h3 class="card-title">{{ item.title }}</h3>
+					<p class="card-text">{{ item.content|truncatechars_html:200 }}</p>
 				  </div>
 				  <a href="#" class="buttom-blue">Подробнее</a>
 				</div>
-				<div class="card pb-4">
-				  <img class="card-img-top doctor" src="{% static '/img/doctor.jpg' %}" alt="Card image cap">
-				  <div class="card-body">
-					<h3 class="card-title">Название карточки</h3>
-					<p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-				  </div>
-				  <a href="#" class="buttom-blue">Подробнее</a>
-				</div>
-				<div class="card pb-4">
-				  <img class="card-img-top doctor" src="{% static '/img/doctor.jpg' %}" alt="Card image cap">
-				  <div class="card-body">
-					<h3 class="card-title">Название карточки</h3>
-					<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-				  </div>
-				  <a href="#" class="buttom-blue">Подробнее</a>
-				</div>
+                {% endfor %}
+
 			</div>
 
 		</div>
