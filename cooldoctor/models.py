@@ -105,6 +105,9 @@ class Article(models.Model):
         verbose_name = 'Статья'
         verbose_name_plural = 'Статьи'
 
+    def __str__(self):
+        return self.title
+
 
 
 

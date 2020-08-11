@@ -26,6 +26,7 @@ class Home(ListView):
         context = super().get_context_data(**kwargs)
         context['discounts'] = Discounts.objects.all()
         context['doctor'] = Doctor.objects.all().all()[:3]
+        context['article'] =  Article.objects.all()
 
         return context
 
