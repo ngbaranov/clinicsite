@@ -1,9 +1,32 @@
 {% extends 'base.html' %}
 
+
 {% load static %}
 
 
 {% block content %}
 
+    <div class="container ">
+    {% for item in doctors %}
+        <div class="card mb-3 mt-3" >
+            <div class="row no-gutters">
+                <div class="col-md-4">
+                    {% if item.photo %}
+                    <img src="{{item.photo.url}}" class="card-img" alt="{{ item.title }}">
+                    {% else %}
+                    <img src="{% static 'img/not.png' %}" class="card-img" alt="{{ item.title }}">
+                    {% endif %}
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">{{item.title}}</h5>
+                        <p class="card-text">{{item.content}}</p>
+                        <a href="#" class="buttom-blue">Подробнее</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+    </div>
 
 {% endblock %}
