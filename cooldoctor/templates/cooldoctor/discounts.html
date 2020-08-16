@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+    <div class="container ">
+        <div class="card mt-3">
+            <div class="card-header">
+                 {{ discount.title|safe }}
+            </div>
+            <div class="card-body">
+
+                <p class="card-text">{{ discount.content|safe }}</p>
+                <a href="{{ item.get_absolute_url }}" class="buttom-blue">Запись</a>
+
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

@@ -24,7 +24,7 @@
 								  <div class="card-body">
                                       <h3 class="card-title">{{ item.title|safe }}</h3>
 									<p class="card-text">{{ item.content|safe }}</p>
-									<a href="#" class="buttom-blue">Подробнее</a>
+									<a href="{{ item.get_absolute_url }}" class="buttom-blue">Подробнее</a>
 								  </div>
 								</div>
                                 {% endfor %}
@@ -91,7 +91,7 @@
 					<h3 class="card-title">{{ item.title }}</h3>
 					<p class="card-text">{{ item.content|truncatechars_html:200 }}</p>
 				  </div>
-				  <a href="#" class="buttom-blue">Подробнее</a>
+				  <a href="{{ item.get_absolute_url }}" class="buttom-blue">Подробнее</a>
 				</div>
                 {% endfor %}
 

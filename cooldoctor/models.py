@@ -85,7 +85,7 @@ class Discounts(models.Model):
     content= models.TextField(verbose_name='Контент')
 
     def get_absolute_url(self):
-        return reverse('discount', kwargs={'pk':self.pk})
+        return reverse('discounts', kwargs={'pk':self.pk})
 
     class Meta:
         verbose_name = 'Скидка'

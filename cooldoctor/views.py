@@ -2,18 +2,26 @@ from django.shortcuts import render
 from .models import *
 from django.views.generic import ListView, DetailView
 
+class ViewDoctor(DetailView):
+    model = Doctor
+    # template_name = 'cooldoctor/view_doctor.html'
+
+
+
+class Discount (DetailView):
+    model = Discounts
+    template_name = 'cooldoctor/discounts.html'
+    context_object_name = 'discount'
+
+    def get_queryset(self):
+        return Discounts.objects.filter(pk = self.kwargs['pk'])
+
 
 class Information(DetailView):
     model = TopMenu
     template_name = 'cooldoctor/information.html'
     context_object_name = 'inf_view'
 
-# def information(request, pk):
-#
-#     return render(request,'cooldoctor/information.html')
-
-# def index (request)
-#     return render(request, 'cooldoctor/index.html')
 
 class SpecDoctor(ListView):
     model = Doctor
