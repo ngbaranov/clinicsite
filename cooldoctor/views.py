@@ -2,6 +2,9 @@ from django.shortcuts import render
 from .models import *
 from django.views.generic import ListView, DetailView
 
+class ViewArticle(DetailView):
+    model = Article
+
 class ViewDoctor(DetailView):
     model = Doctor
     # template_name = 'cooldoctor/view_doctor.html'
